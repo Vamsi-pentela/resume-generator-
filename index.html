@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>this cv create by vamsi's resume Generator</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="main-container">
+        <div id="header" class="heading">
+            <h1 id="maintitle">Resume Generator</h1>
+            <h2 id="author">by Vamsi</h2>
+            <h6 id="author">ani  enter  chasi generate kottu mowa</h6>
+        </div>
+
+        <div id="form-container" class="diff">
+            <div id="personal-info" class="total-pros">
+                <div class="pros">
+                    <h3 id="personal-info-title">Personal Information</h3>
+                </div>
+                <div class="inputs-pros">
+                    <label for="namefield">Your Name</label>
+                    <input  type="text" id="namefield" placeholder="Enter your name">
+                </div>
+                
+                <div class="inputs-pros">
+                    <label for="contactfield">Your Contact</label>
+                    <input type="text" id="contactfield" placeholder=" vamsipentela@gmail.com |+91896924585 ">
+                </div>
+                <div class="inputs-pros">
+                    <label for="addressfield">Your Address</label>
+                    <textarea id="addressfield" placeholder="123 Main St, Anytown, ap" rows="3"></textarea>
+                </div>
+                <p class="link-s" id="important-links">Important Links</p>
+                <div class="inputs-pros">
+                    <label for="facebook">instagram</label>
+                    <input type="text" id="instagram" placeholder="Enter your instagram link">
+                </div>
+                <div class="inputs-pros">
+                    <label for="instagram">facebook</label>
+                    <input type="text" id="facebook" placeholder="Enter your facebook  link">
+                </div>
+                <div class="inputs-pros">
+                    <label for="linkedin">LinkedIn</label>
+                    <input type="text" id="linkedin" placeholder="Enter your LinkedIn link">
+                </div>
+            </div>
+
+            <div id="professional-info" class="total-prof">
+                <div class="prof">
+                    <h3 id="professional-info-title">Professional Information</h3>
+                </div>
+                <div class="inputs-pros">
+                    <label for="objectivefield">Objective</label>
+                    <textarea id="objectivefield" placeholder="adho okati enter chai raa babu chatgpt lo chusi time waste chaikuu nee sonta gaa rasi" rows="3"></textarea>
+                </div>
+                <div class="inputs-pros">
+                    <label for="objectivefield">technical skills</label>
+                    <textarea id="techskill" placeholder="Enter your technical skills java,pyhon " rows="3"></textarea>
+                </div>
+                <div class="inputs-pros" id="we">
+                    <label for="workexperiencefield">Work Experience</label>
+                    <div id="work-experience">
+                        <textarea id="workexperiencefield" placeholder="Job Title 1
+Company Name, Location
+Duration: Jan 2020 - Present" rows="3"></textarea>
+                    </div>
+                    <button id="btn1" onclick="add1()" class="add-btn">Add</button>
+                </div>
+                <div class="inputs-pros" id="we2">
+                    <label for="academicqualificationfield">Academic Qualification</label>
+                    <div id="academic-qualification">
+                        <textarea id="academicqualificationfield" placeholder="Degree Name
+Institution Name, Location
+Year of Graduation: 2017" rows="3"></textarea>
+                    </div>
+                    <button onclick="add2()" id="btn2" class="add-btn">Add</button>
+                </div>
+            </div>
+        </div>
+
+        <button id="generate-btn" class="cv-btn" onclick="generatecv()">Generate CV</button>
+    </div>
+
+    <div class="resume" id="resume">
+        <div class="header" id="resume-header">
+            <h1 id="resumename">vamsi pentela</h1>
+            <p >Contact: <span id="resume-contact"> vamsipentela@gmail.com | +919323*****</span> </p>
+            <p>Address: <span  id="resume-address" >123 Main St, Anytown, ap</span></p>
+            <div class="social-links" id="resume-social-links">
+                <p id="resume-instagram-link">
+                    <a href="#1" id="instagram-link">https://instagram.com/vamsipentela</a>
+                </p>
+                <p id="resume-facebook-link">
+                    <a href="#2" id="fb-link">https://facebook.com/vamsipentela</a>
+                </p>
+                <p id="resume-linkedin-link">
+                    <a href="#3" id="linkedin-link">https://linkedin.com/vamsipentela</a>
+                </p>
+                
+            </div>
+        </div>
+        <div class="section" id="objective-section">
+            <h2 id="objective-title">Objective</h2>
+            <p id="objective-text">adho okati enter chai raa babu chatgpt lo chusi time waste chaikuu nee sonta gaa rasi</p>
+        </div>
+        <div class="section" id="objective-section">
+            <h2 id="objective-title">technical skills</h2>
+            <p id="techtext">python,java,oops,c,c++,........</p>
+        </div>
+        
+        <div class="section" id="work-experience-section">
+            <h2 id="work-experience-title">Work Experience</h2>
+            <div class="experience" id="experience-1">
+                <h5 id="experience-1-title">Job Title 1
+                    <br>Company Name, Location <br>
+                    Duration: Jan 2020 - Present
+                </h5>
+            </div>
+            <div class="experience" id="experience-2">
+                <h5 id="experience-2-title">Job Title 1
+                    <br>Company Name, Location <br>
+                    Duration: Jan 2020 - Present
+                </h5>
+            </div>
+        </div>
+        <div class="section" id="academic-qualifications-section">
+            <h2 id="academic-qualifications-title">Academic Qualifications</h2>
+            <div class="qualification" id="qualification-1">
+                <h5 id="qualification-1-title">Degree Name <br>
+                    Institution Name, Location <br>
+                    Year of Graduation: 2017
+                </h5>
+            </div>
+            <div class="qualification" id="qualification-2">
+                <h5 id="qualification-2-title">Degree Name <br>
+                    Institution Name, Location <br>
+                    Year of Graduation: 2017
+                </h5>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="print" id="print" >
+        <button onclick="printvamsi()" >print</button>
+    </div>
+
+    <script>
+        function add1() {
+            const newnode = document.createElement("textarea");
+            newnode.setAttribute("rows", 3);
+            newnode.placeholder = "Enter more experiences";
+            const we = document.getElementById("we");
+            const btn1 = document.getElementById("btn1");
+            we.insertBefore(newnode, btn1);
+        }
+        
+        function add2() {
+            const newnode2 = document.createElement("textarea");
+            newnode2.setAttribute("rows", 3);
+            newnode2.placeholder = "Enter more qualifications";
+            const we2 = document.getElementById("we2");
+            const btn2 = document.getElementById("btn2");
+            we2.insertBefore(newnode2, btn2);
+        }
+        
+        function generatecv() {
+            const namefield = document.getElementById("namefield").value;
+            const resumename = document.getElementById("resumename");
+            const resumecontact = document.getElementById("resume-contact");
+            const contactfield = document.getElementById("contactfield").value;
+            const addressfield = document.getElementById("addressfield").value;
+            const resumeaddress = document.getElementById("resume-address");
+        
+            if (namefield.length > 0) {
+                resumename.textContent = namefield;
+            } else {
+                alert("Please enter your name");
+            }
+        
+            if (contactfield.length > 20) {
+                resumecontact.textContent = contactfield;
+            } else {
+                alert("You entered an incorrect or incomplete email or phone number");
+            }
+        
+            if (addressfield.length > 10) {
+                resumeaddress.textContent = addressfield;
+            } else {
+                alert("Please enter your full address");
+            }
+        
+            const instagramlink = document.getElementById("instagram-link");
+            const instagram = document.getElementById("instagram").value;
+            if (instagram.length > 10) {
+                instagramlink.textContent = instagram;
+                instagramlink.href = instagram;
+            } else {
+                alert("Please enter a valid Instagram link");
+            }
+        
+            const fblink = document.getElementById("fb-link");
+            const facebook = document.getElementById("facebook").value;
+            if (facebook.length > 10) {
+                fblink.textContent = facebook;
+                fblink.href = facebook;
+            } else {
+                alert("Please enter a valid Facebook link");
+            }
+        
+            const linkedinlink = document.getElementById("linkedin-link");
+            const linkedin = document.getElementById("linkedin").value;
+            if (linkedin.length > 10) {
+                linkedinlink.textContent = linkedin;
+                linkedinlink.href = linkedin;
+            } else {
+                alert("Please enter a valid LinkedIn link");
+            }
+        
+            const objectivetext = document.getElementById("objective-text");
+            const objectivefield = document.getElementById("objectivefield").value;
+            if (objectivefield.length > 30) {
+                objectivetext.textContent = objectivefield;
+            } else {
+                alert("Please enter a more meaningful objective, it's too short");
+            }
+
+            const techtext = document.getElementById("techtext");
+            const techskill = document.getElementById("techskill").value;
+            if (techskill.length > 5) {
+                techtext.textContent = techskill;
+            } else {
+                alert("please enter two or threee tech skills ");
+            }
+            const workexperiencefield = document.querySelectorAll("#we textarea");
+            const workExperienceSection = document.getElementById("work-experience-section");
+            workExperienceSection.innerHTML = '<h2 id="work-experience-title">Work Experience</h2>';
+            workexperiencefield.forEach((textarea, index) => {
+                const experienceDiv = document.createElement("div");
+                experienceDiv.innerHTML = `<h5 id="experience-${index + 1}-title">${textarea.value}</h5>`;
+                workExperienceSection.appendChild(experienceDiv);
+            });
+
+            // THIS IS KEPT BY VAMSI FOR UNDERSTANDING CODE PROPERLY IN FUTURE 
+            //const array = ['a', 'b', 'c'];
+            //array.forEach((element, index) => {
+              //  console.log(`Element at index ${index} is ${element}`);
+           // });
+           const academicQualificationField = document.querySelectorAll("#we2 textarea");
+           const academicQualificationsSection = document.getElementById("academic-qualifications-section");
+           academicQualificationsSection.innerHTML = '<h2 id="academic-qualifications-title">Academic Qualifications</h2>';
+           academicQualificationField.forEach((textarea, index) => {
+               const qualificationDiv = document.createElement("div");
+               qualificationDiv.innerHTML = `<h5 id="qualification-${index + 1}-title">${textarea.value}</h5>`;
+               academicQualificationsSection.appendChild(qualificationDiv);
+           });   
+           document.getElementById("main-container").style.display='none';
+           document.getElementById("resume").style.display='block';
+           document.getElementById("print").style.display='block';
+        }
+        function printvamsi(){
+            window.print();
+        }        
+    </script>
+</body>
+</html>
